@@ -1,0 +1,9 @@
+- name: Software install/remove via win_chocolatey
+  hosts: winservers
+  gather_facts: false
+
+      # instalando softwares via chocolatey
+      - name: Install 7Zip
+        win_chocolatey:
+          name: 7zip
+          state: present #use "present" for install and "absent" for uninstall

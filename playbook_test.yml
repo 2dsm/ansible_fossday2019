@@ -1,0 +1,9 @@
+- name: Test communication
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Screen Message
+      win_msg:
+        display_seconds: 10
+        msg: Test screen message OK!

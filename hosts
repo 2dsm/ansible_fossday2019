@@ -1,0 +1,12 @@
+[winservers]
+172.16.0.94
+
+[winservers:vars]
+ansible_user = Administrator
+ansible_password = Admin1234
+ansible_port = 5986
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore
+
+[lnxservers]
+172.16.0.170
