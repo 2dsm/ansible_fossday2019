@@ -4,6 +4,7 @@ Arquivos referente ao evento [https://fossday.org](https://fossday.org) no dia 0
 
 ## Palestrantes
 [@diegomaia](http://diegomaia.me)
+
 [@raffaeldutra](https://rafaeldutra.me)
 
 ## Introdução
