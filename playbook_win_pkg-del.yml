@@ -1,0 +1,18 @@
+- name: Software remove via win_package
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    # removendo softwares via win_package
+    - name: Remove 7Zip
+      win_package:
+        path: C:\temp\7z.msi
+        state: absent
+        #use "present" for install and "absent" for uninstall
+
+    # criando a pasta C:\temp
+    - name: Delete folder C:\temp\
+      win_file:
+        path: C:\temp\
+        state: absent
+        #use "directory" for create and "absent" for remove

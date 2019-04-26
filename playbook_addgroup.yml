@@ -1,0 +1,15 @@
+- name: Add/Remove group
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Create a new group called infra
+      win_group:
+        name: infra
+        description: Infra Group
+        state: present
+
+#    - name: Remove a group called infra
+#      win_group:
+#        name: infra
+#        state: absent

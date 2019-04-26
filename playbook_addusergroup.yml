@@ -1,0 +1,11 @@
+- name: Add user/group
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Add user in group Administrators
+      win_group_membership:
+        name: Administrators
+        members:
+          - User1
+        state: present

@@ -1,5 +1,6 @@
 [winservers]
 172.16.0.94
+#192.168.0.106
 
 [winservers:vars]
 ansible_user = Administrator

@@ -1,0 +1,25 @@
+- name: Add user/group
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Create local user
+      win_user:
+        name: '{{item.name}}'
+        password: '{{item.password}}'
+        groups: infra
+        update_password: no
+        password_never_expired: yes
+      with_items:
+      - name: User1
+        password: Password1
+      - name: User2
+        password: Password2
+
+#    - name: Remove user
+#      win_user:
+#        name: User1
+#        #Use "state: absent" for remove the user
+#        state: absent
+#        #Use "account_disabled: yes" for disable the user
+#        #account_disabled: yes

@@ -1,0 +1,24 @@
+- name: Software install/remove via win_package
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    # criando a pasta C:\temp
+    - name: Create folder C:\temp\
+      win_file:
+        path: C:\temp\
+        state: directory
+        #use "directory" for create and "absent" for remove
+
+    # baixando o arquivo de instalação do 7Zip
+    - name: Download Zip package
+      win_get_url:
+        url: https://www.7-zip.org/a/7z1701-x64.msi
+        dest: C:\temp\7z.msi
+
+    # instalando softwares via win_package
+    - name: Install 7Zip
+      win_package:
+        path: C:\temp\7z.msi
+        state: present
+        #use "present" for install and "absent" for uninstall
