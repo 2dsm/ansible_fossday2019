@@ -27,8 +27,3 @@
 - win_chocolatey: Executar o script **install_chocolatey.ps1**
 
 - Validar se o chocolatey foi instalado: **choco /?**
-
-
-======================
-
-*[https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html](https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html)
