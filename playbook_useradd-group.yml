@@ -1,4 +1,4 @@
-- name: Add user/group
+- name: Manage user/group
   hosts: winservers
   gather_facts: false
 

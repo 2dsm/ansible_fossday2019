@@ -1,0 +1,12 @@
+- name: Manage users
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Remove user
+      win_user:
+        name: rafael
+        #Use "state: absent" for remove the user
+        #state: absent
+        #Use "account_disabled: yes" for disable the user
+        account_disabled: yes

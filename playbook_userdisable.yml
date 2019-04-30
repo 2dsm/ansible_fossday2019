@@ -1,0 +1,9 @@
+- name: Manage users
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Disable user
+      win_user:
+        name: rafael
+        account_disabled: yes

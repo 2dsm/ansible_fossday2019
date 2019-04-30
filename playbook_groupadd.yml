@@ -5,7 +5,7 @@
   tasks:
     - name: Create a new group called infra
       win_group:
-        name: infra
+        name: infra1
         description: Infra Group
         state: present
 

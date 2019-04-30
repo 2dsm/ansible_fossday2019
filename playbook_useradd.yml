@@ -1,0 +1,16 @@
+- name: Manage users
+  hosts: winservers
+  gather_facts: false
+
+  tasks:
+    - name: Create local user
+      win_user:
+        name: '{{item.name}}'
+        password: '{{item.password}}'
+        groups: infra1
+        update_password: always
+      with_items:
+      - name: diego
+        password: Infra1234
+      - name: rafael
+        password: Infra1234

@@ -1,0 +1,6 @@
+- name: Facts
+  hosts: winservers
+  gather_facts: true
+
+  tasks:
+    - debug: var=ansible_facts
